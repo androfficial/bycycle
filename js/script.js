@@ -19,3 +19,4 @@ new Swiper('.slider__body', {
 	},
 
  });
+AOS.init();

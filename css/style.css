@@ -251,6 +251,50 @@ body._lock {
   fill: #03a9f4;
 }
 
+@-webkit-keyframes border-color {
+  0% {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  25% {
+    border-color: salmon;
+  }
+
+  50% {
+    border-color: rebeccapurple;
+  }
+
+  75% {
+    border-color: rosybrown;
+  }
+
+  100% {
+    border-color: orange;
+  }
+}
+
+@keyframes border-color {
+  0% {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  25% {
+    border-color: salmon;
+  }
+
+  50% {
+    border-color: rebeccapurple;
+  }
+
+  75% {
+    border-color: rosybrown;
+  }
+
+  100% {
+    border-color: orange;
+  }
+}
+
 .header {
   position: absolute;
   z-index: 100;
@@ -324,10 +368,10 @@ body._lock {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   width: 0;
-  height: 1px;
-  background-color: rgba(77, 73, 89, 0.6);
+  height: 2px;
+  background-color: rgba(77, 73, 89, 0.7);
   -webkit-transition: width .3s ease 0s;
   -o-transition: width .3s ease 0s;
   transition: width .3s ease 0s;
@@ -743,7 +787,7 @@ body._lock {
   letter-spacing: calc(1px + 1.8 * ((100vw - 320px) / 1280));
   min-width: calc(290px + 10 * ((100vw - 320px) / 1280));
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.5);
+  animation: border-color 2.8s 0s infinite alternate-reverse linear;
 }
 
 .item-shop__image img {
@@ -1084,6 +1128,8 @@ body._lock {
   .shop__btn:hover {
     background-color: #fff;
     color: #000;
+    -webkit-animation-name: none;
+            animation-name: none;
   }
 
   .form__btn:hover {
