@@ -856,11 +856,11 @@ body._lock {
   border: 1px solid #D3D7D9;
   padding-left: 25px;
   padding-right: 25px;
-  -webkit-transition: border-color .3s ease 0s, -webkit-box-shadow .3s ease 0s;
-  transition: border-color .3s ease 0s, -webkit-box-shadow .3s ease 0s;
-  -o-transition: box-shadow .3s ease 0s, border-color .3s ease 0s;
-  transition: box-shadow .3s ease 0s, border-color .3s ease 0s;
-  transition: box-shadow .3s ease 0s, border-color .3s ease 0s, -webkit-box-shadow .3s ease 0s;
+  -webkit-transition: border-color .3s ease 0s, border .3s ease 0s, -webkit-box-shadow .3s ease 0s;
+  transition: border-color .3s ease 0s, border .3s ease 0s, -webkit-box-shadow .3s ease 0s;
+  -o-transition: box-shadow .3s ease 0s, border-color .3s ease 0s, border .3s ease 0s;
+  transition: box-shadow .3s ease 0s, border-color .3s ease 0s, border .3s ease 0s;
+  transition: box-shadow .3s ease 0s, border-color .3s ease 0s, border .3s ease 0s, -webkit-box-shadow .3s ease 0s;
 }
 
 .form__input:focus {
@@ -880,6 +880,16 @@ body._lock {
   background-color: #64C29E;
   border: none;
   margin: 0px 0px 0px 8px;
+}
+
+._error {
+  border-color: red;
+}
+
+._error:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid red;
 }
 
 @media (max-width: 1200px) {

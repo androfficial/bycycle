@@ -20,3 +20,36 @@ new Swiper('.slider__body', {
 
  });
 AOS.init();
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', (e) => {
+   e.preventDefault();
+   let error = checkValueInput(form);
+   if (error === 0) {
+      alert('Спасибо за подписку!');
+   } else {
+      alert('Пожалуйста, заполните поля.');
+   }
+});
+
+const checkValueInput = (form) => { 
+   let error = 0;
+   const inputs = form.querySelectorAll('._req');
+
+   for (let input of inputs) {
+      input.classList.remove('_error');
+      if (input.value === '') {
+         input.classList.add('_error');
+         input.addEventListener('input', () => {
+            if (input.value.length > 0) {
+               input.classList.remove('_error');
+            } else {
+               input.classList.add('_error');
+            }
+         });
+         error++;
+      }
+   }
+
+   return error;
+};
