@@ -892,6 +892,36 @@ body._lock {
   border: 1px solid red;
 }
 
+@media (min-width: 992px) {
+  .menu__link:hover::before {
+    width: 100%;
+  }
+
+  .footer__address p:nth-child(3) a:hover {
+    text-decoration: underline;
+  }
+
+  .social__link:hover .icon {
+    fill: #000;
+  }
+
+  .item:hover .item__logo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .shop__btn:hover {
+    background-color: #fff;
+    color: #000;
+    -webkit-animation-name: none;
+            animation-name: none;
+  }
+
+  .form__btn:hover {
+    background-color: #4eb990;
+  }
+}
+
 @media (max-width: 1200px) {
   .brands--last .brands__column:nth-child(1) {
     -webkit-box-ordinal-group: 3;
@@ -1114,35 +1144,5 @@ body._lock {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     margin-left: 0;
-  }
-}
-
-@media (any-hover: hover) {
-  .menu__link:hover::before {
-    width: 100%;
-  }
-
-  .footer__address p:nth-child(3) a:hover {
-    text-decoration: underline;
-  }
-
-  .social__link:hover .icon {
-    fill: #000;
-  }
-
-  .item:hover .item__logo {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .shop__btn:hover {
-    background-color: #fff;
-    color: #000;
-    -webkit-animation-name: none;
-            animation-name: none;
-  }
-
-  .form__btn:hover {
-    background-color: #4eb990;
   }
 }
