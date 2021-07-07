@@ -498,14 +498,17 @@ body._lock {
   position: relative;
 }
 
-.main-sreen img {
+.main-sreen::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: url(../img/main-screen/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .generation {
@@ -993,6 +996,12 @@ body._lock {
 
   .form__btn {
     font-size: calc(14px + 10 * ((100vw - 320px) / 810));
+  }
+}
+
+@media (max-width: 992px) {
+  .main-sreen::before {
+    background-attachment: scroll;
   }
 }
 
