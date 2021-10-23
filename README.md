@@ -5,5 +5,6 @@
 * CSS @Keyframes Animations
 * AOS - Animate on scroll
 * JavaScript
+* SCSS
 * BEM methodology
 * Responsive, elastic and cross-browser layout.
